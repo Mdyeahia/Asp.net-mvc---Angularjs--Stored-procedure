@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    
+</head>
+<body ng-app="Homeapp">
+    <div ng-controller="HomeController">
+        <table class="table">
+            <tr>
+                <th>Sr no</th>
+
+                <th>Email</th>
+
+                <th>Password</th>
+
+                <th>Name</th>
+
+                <th>Address</th>
+
+                <th>City</th>
+
+                <th>Actions</th>
+            </tr>
+            <tr ng-repeat="e in record" ng-class-even="'even'" ng-class-odd="'odd'">
+                <th>{{e.Sr_no}}</th>
+                <th>{{e.Email}}</th>
+                <th>{{e.Password}}</th>
+                <th>{{e.Name}}</th>
+                <th>{{e.Address}}</th>
+                <th>{{e.City}}</th>
+                <th><a href="/Home/update_data?id={{e.Sr_no}}">Update</a></th>
+                <th><button ng-click="deleterecord(e.Sr_no)">Delete</button></th>
+            </tr>
+        </table>
+
+    </div>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/Angularjs/HomeAngularJs.js"></script>
+</body>
+</html>
