@@ -13,7 +13,7 @@ app.controller("HomeController", function ($scope,$http) {
         }).then(function (d) {
             $scope.btntext = "Save";
             $scope.Register = null;
-           
+            $scope.datatable();
         }).error(function () {
             alert('failed');
         });
@@ -27,5 +27,8 @@ app.controller("HomeController", function ($scope,$http) {
         alert('Failed');
 
     });
+    $scope.datatable = function () {
+        window.location.href = "/Home/Show_data";
+    }
 
 });
