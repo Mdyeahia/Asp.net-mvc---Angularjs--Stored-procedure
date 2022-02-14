@@ -17,11 +17,9 @@ namespace AngularFirst.Controllers
             return View();
         }
         public ActionResult Show_data()
-
         {
 
             return View();
-
         }
 
         public ActionResult update_data(int id)
@@ -111,20 +109,20 @@ namespace AngularFirst.Controllers
             return Json(res, JsonRequestBehavior.AllowGet);
         }
 
-        [HttpPost]
-        public ContentResult Upload()
-        {
-            string path = Server.MapPath("~/Upload");
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            foreach(string key in Request.Files)
-            {
-                HttpPostedFileBase postedFile = Request.Files[key];
-                postedFile.SaveAs(path + postedFile.FileName);
-            }
-            return Content("Success");
-        }
+        //[HttpPost]
+        //public ContentResult Upload()
+        //{
+        //    string path = Server.MapPath("~/Upload");
+        //    if (!Directory.Exists(path))
+        //    {
+        //        Directory.CreateDirectory(path);
+        //    }
+        //    foreach(string key in Request.Files)
+        //    {
+        //        HttpPostedFileBase postedFile = Request.Files[key];
+        //        postedFile.SaveAs(path + postedFile.FileName);
+        //    }
+        //    return Content("Success");
+        //}
     }
 }

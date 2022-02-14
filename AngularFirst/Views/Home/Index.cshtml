@@ -9,9 +9,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
 </head>
 <body>
-    <div ng-app="Homeapp" ng-controller="HomeController">
+    <div ng-app="ngApp" ng-controller="HomeController">
         <div class="container">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
@@ -37,13 +39,15 @@
                 </div>
                 <div class="form-group">
 
-                    <input type="button" class="btn btn-primary" ng-click="savedata()" value="{{btntext}}" />
-                    <input type="hidden" class="btn btn-primary"ng-click="datatable()" />
+                    <input type="button" class="btn btn-primary" ng-click="savedata(Register)" value="{{btntext}}" />
+
                 </div>
             </div>
         </div>
     </div>
-    <script src="~/Scripts/angular.min.js"></script>
-    <script src="~/Scripts/Angularjs/HomeAngularJs.js"></script>
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="~/ScriptsNG/Module/App.js"></script>
+    <script src="~/ScriptsNG/Controller/Home/HomeAngularJs.js"></script>
+    <script src="~/ScriptsNG/Service/Home/HomeService.js"></script>
 </body>
 </html>
