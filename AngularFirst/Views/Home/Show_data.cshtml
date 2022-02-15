@@ -38,7 +38,7 @@
                 <th>{{e.Address}}</th>
                 <th>{{e.City}}</th>
                 <th><a href="/Home/update_data?id={{e.Sr_no}}">Update</a></th>
-                <th><button ng-click="deleterecord(e.Sr_no)">Delete</button></th>
+                <th><a ng-click="deleterecord(e.Sr_no)">Delete</a></th>
             </tr>
         </table>
 

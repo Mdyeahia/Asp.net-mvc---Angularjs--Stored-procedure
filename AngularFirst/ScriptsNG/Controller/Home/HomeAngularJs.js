@@ -54,5 +54,15 @@
             alert('failed');
         });
     };
+
+    $scope.deleterecord = function (id)
+    {
+        alert('Please Wait....'+id);
+        HomeService.DeleteRecord(id).then(function () {
+            window.setTimeout(function () {
+                window.location.href = "../Home/Show_data";
+            }, 3000)
+        })
+    }
 }
 ]);

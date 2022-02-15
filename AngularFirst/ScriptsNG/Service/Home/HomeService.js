@@ -10,5 +10,8 @@
     this.UpdateRecord = function (model) {
         return $http.post('../Home/Update_record', { rs: model })
     }
+    this.DeleteRecord = function (id) {
+        return $http.post('../Home/Delete_record', { id:id })
+    }
 
 })
