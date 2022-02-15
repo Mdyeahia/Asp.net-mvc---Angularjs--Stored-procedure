@@ -7,5 +7,8 @@
     this.getrecordTable = function () {
         return $http.post('../Home/Get_data');
     }
+    this.UpdateRecord = function (model) {
+        return $http.post('../Home/Update_record', { rs: model })
+    }
 
 })

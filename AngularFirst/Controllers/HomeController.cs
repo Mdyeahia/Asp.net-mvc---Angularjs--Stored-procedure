@@ -25,9 +25,8 @@ namespace AngularFirst.Controllers
         public ActionResult update_data(int id)
 
         {
-
+            ViewBag.Id = id;
             return View();
-
         }
 
         public JsonResult Add_record(Register rs)

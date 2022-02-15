@@ -46,6 +46,7 @@ namespace AngularFirst.Data_access_layer
             SqlCommand com = new SqlCommand("Sp_register_Update", con);
             com.CommandType = CommandType.StoredProcedure;
 
+            com.Parameters.AddWithValue("@Sr_no", re.Sr_no);
             com.Parameters.AddWithValue("@Email", re.Email);
             com.Parameters.AddWithValue("@Password", re.Password);
             com.Parameters.AddWithValue("@Name", re.Name);

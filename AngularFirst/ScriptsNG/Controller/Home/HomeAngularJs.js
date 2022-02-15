@@ -25,12 +25,34 @@
     $http.get("/Home/Get_data").then(function (d) {
 
         $scope.record = d.data;
-        console.log('hi')
     }, function (error) {
 
         alert('Failed');
 
     });
+    $scope.GetEditDataById = function (Id) {
 
+        $http.get("/Home/Get_databyid?id=" + Id).then(function (d) {
+            
+            $scope.Register = d.data[0];
+
+        }, function (error) {
+
+            alert('Failed');
+
+        });
+
+    };
+    $scope.updatedata = function (Register) {
+        $scope.btntext = "Updating ! Please Wait....";
+        HomeService.UpdateRecord(Register).then(function () {
+            $scope.btntext = "Save";
+            alert('hiiiiiii')
+            $scope.Register = null;
+            $scope.datatable();
+        }).error(function () {
+            alert('failed');
+        });
+    };
 }
 ]);
