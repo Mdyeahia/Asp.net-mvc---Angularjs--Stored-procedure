@@ -1,7 +1,7 @@
 ﻿ngApp.controller('HomeController', ['HomeService', '$scope','$http',function (HomeService, $scope, $http) {
     "use strict";
     $scope.btntext = "Save";
-
+    $scope.myTime = new Date();
     $scope.savedata = function (Register) {
         $scope.btntext = "Please Wait....";
         HomeService.Add_record(Register).then(function () {
@@ -47,7 +47,7 @@
         $scope.btntext = "Updating ! Please Wait....";
         HomeService.UpdateRecord(Register).then(function () {
             $scope.btntext = "Save";
-            alert('hiiiiiii')
+            alert('Updating')
             $scope.Register = null;
             $scope.datatable();
         }).error(function () {

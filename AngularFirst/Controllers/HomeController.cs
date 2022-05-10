@@ -16,6 +16,10 @@ namespace AngularFirst.Controllers
         {
             return View();
         }
+        public ActionResult test()
+        {
+            return View();
+        }
         public ActionResult Show_data()
         {
 
